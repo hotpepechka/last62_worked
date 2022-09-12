@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <title>Title</title>
+</head>
+<body background="https://c.tenor.com/bK1qpWGyQKkAAAAM/kitty.gif">
+  <header>
+    <h1>
+      <a href="/">Django blog</a>
+    </h1>
+    <h2>
+        <a href="{% url 'post_new' %}">+ New Blog Post</a>
+    </h2>
+  </header>
+  <div class="container">
+    {%block content%}
+    {%endblock content%}
+  </div>
+</body>
+</html>
